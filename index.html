@@ -1,23 +1,162 @@
-<!doctype html>
-
+<!DOCTYPE html>
 <html>
-  <head>
-    <title>WebGL Three.js</title>
-    <style>
-    body {
-      background-color: #050547;
-      margin: 0;
-      overflow: hidden;
-    }
-    canvas {
-      width: 100%;
-      height: auto;
-    }
-    </style>
-  </head>
-  <body>
-    <script src='./js/three.js'></script>
-    <script src='./js/orbitControls.js'></script>
-    <script src='./js/main.js'></script>
-  </body>
+<head>
+
+	<meta charset="utf-8">
+
+	<title>LUNR</title>
+
+	<!-- Behavioral Meta Data -->
+	<meta name="apple-mobile-web-app-capable" content="yes">
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+
+	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.2/jquery.min.js"></script>
+	<script src="js/screenfull.js"></script>
+
+	<!-- Styles -->
+	<link rel="stylesheet" type="text/css" href="css/styles.css"/>
+
+	<style>
+	</style>
+</head>
+<body>
+
+	<div class="scroll-hack"></div>
+
+	<header>
+		<div id="menuBtn">
+			<img src='images/menu.svg'>
+		</div>
+		<div id="title">
+			<span id="day" class="">29</span> Feb 2015
+			<p id="time" class="">19:00</p>
+		</div>
+	</header>
+
+	<div id="closeBtn" class="hidden">
+		<img src='images/close.svg'>
+	</div>
+
+	<div id="container" class="container">
+
+		<div id="scene" class="scene">
+
+			<div class="layer" data-depth="1.00"></div>
+
+			<div class="layer" data-depth="0.0" id="border-container">
+				<div class="border"></div>
+			</div>
+
+			<div class="layer" data-depth="0.20" id="calendar-container">
+				<div id="calendar" class="hidden">
+					<div class="calendar-row">
+						<div class="day-column">m</div>
+						<div class="day-column">t</div>
+						<div class="day-column">w</div>
+						<div class="day-column">t</div>
+						<div class="day-column">f</div>
+						<div class="day-column">s</div>
+						<div class="day-column">s</div>
+					</div>
+					<div class="calendar-row">
+						<div class="calendar-column"></div>
+						<div class="calendar-column"></div>
+						<div class="calendar-column"></div>
+						<div class="calendar-column on">1</div>
+						<div class="calendar-column on">2</div>
+						<div class="calendar-column on">3</div>
+						<div class="calendar-column on">4</div>
+					</div>
+					<div class="calendar-row">
+						<div class="calendar-column on">5</div>
+						<div class="calendar-column on">6</div>
+						<div class="calendar-column on">7</div>
+						<div class="calendar-column on">8</div>
+						<div class="calendar-column on">9</div>
+						<div class="calendar-column on">10</div>
+						<div class="calendar-column on">11</div>
+					</div>
+					<div class="calendar-row">
+						<div class="calendar-column on">12</div>
+						<div class="calendar-column on">13</div>
+						<div class="calendar-column on">14</div>
+						<div class="calendar-column on">15</div>
+						<div class="calendar-column on">16</div>
+						<div class="calendar-column on">17</div>
+						<div class="calendar-column on">18</div>
+					</div>
+					<div class="calendar-row">
+						<div class="calendar-column on">19</div>
+						<div class="calendar-column on">20</div>
+						<div class="calendar-column on">21</div>
+						<div class="calendar-column on">22</div>
+						<div class="calendar-column on">23</div>
+						<div class="calendar-column on">24</div>
+						<div class="calendar-column on">25</div>
+					</div>
+					<div class="calendar-row">
+						<div class="calendar-column on">26</div>
+						<div class="calendar-column on">27</div>
+						<div class="calendar-column on">28</div>
+						<div class="calendar-column on">29</div>
+						<div class="calendar-column on">30</div>
+						<div class="calendar-column on">31</div>
+						<div class="calendar-column"></div>
+					</div>
+				</div>
+			</div>
+
+			<canvas id="canvas"></canvas>
+
+			<div class="layer" data-depth="0.30" id="moon-container">
+			</div>
+			<div class="layer" data-depth="0.50" id="data-container">
+				<div id="data">
+					<h1 class="">WAXING<br>GIBBOUS</h1>
+					<ul>
+						<li>moonrise: 23:02</li>
+						<li>moonset: 8:15</li>
+						<li>15 days old</li>
+						<li>367,234 km away</li>
+					</ul>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<script src='./js/three.js'></script>
+	<script src='./js/orbitControls.js'></script>
+	<script src='./js/main.js'></script>
+	<!-- Scripts -->
+	<script src="js/parallax.js"></script>
+	<script>
+
+		// Pretty simple huh?
+		//var scene = document.getElementById('scene');
+		//var parallax = new Parallax(scene);
+
+		$(window).load(function() {
+		  $("html, body").animate({ scrollTop: $(document).height() }, 1000);
+		});
+
+		$('#menuBtn').click(function() {
+			$('#day').addClass('hidden');
+			$('#time').addClass('hidden');
+			$('#data').addClass('hidden');
+			$('#calendar').removeClass('hidden');
+			$('#closeBtn').removeClass('hidden');
+			$('#menuBtn').addClass('hidden');
+		});
+
+		$('#closeBtn').click(function() {
+			$('#day').removeClass('hidden');
+			$('#time').removeClass('hidden');
+			$('#data').removeClass('hidden');
+			$('#calendar').addClass('hidden');
+			$('#closeBtn').addClass('hidden');
+			$('#menuBtn').removeClass('hidden');
+		});
+
+	</script>
+</body>
 </html>
