@@ -177,7 +177,7 @@ function changeData() {
     }
 
     //just faking the distance thing for now... we should fix this later.
-    var distance = randomNumber(1, 700);
+    var distance = randomNumber(100, 300);
     $('#phase-info-4').text("376," + distance + "km away");
 }
 
