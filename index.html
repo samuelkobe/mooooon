@@ -12,6 +12,9 @@
 	<meta name="android-mobile-web-app-capable" content="yes">
 	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
 
+	<link rel="icon" type="image/png" href="img/favicon/favicon-32x32.png" sizes="32x32" />
+	<link rel="icon" type="image/png" href="img/favicon/favicon-16x16.png" sizes="16x16" />
+
 	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.2/jquery.min.js"></script>
 	<script src="js/screenfull.js"></script>
 
@@ -64,45 +67,45 @@
 						<div class="calendar-column"></div>
 						<div class="calendar-column"></div>
 						<div class="calendar-column"></div>
-						<div class="calendar-column on">1</div>
-						<div class="calendar-column on">2</div>
-						<div class="calendar-column on">3</div>
-						<div class="calendar-column on">4</div>
+						<div class="calendar-column icon-24">1</div>
+						<div class="calendar-column icon-25">2</div>
+						<div class="calendar-column icon-26">3</div>
+						<div class="calendar-column icon-27">4</div>
 					</div>
 					<div class="calendar-row">
-						<div class="calendar-column on">5</div>
-						<div class="calendar-column on">6</div>
-						<div class="calendar-column on">7</div>
-						<div class="calendar-column on">8</div>
-						<div class="calendar-column on">9</div>
-						<div class="calendar-column on">10</div>
-						<div class="calendar-column on">11</div>
+						<div class="calendar-column icon-28">5</div>
+						<div class="calendar-column icon-1">6</div>
+						<div class="calendar-column icon-2">7</div>
+						<div class="calendar-column icon-3">8</div>
+						<div class="calendar-column icon-4">9</div>
+						<div class="calendar-column icon-5">10</div>
+						<div class="calendar-column icon-6">11</div>
 					</div>
 					<div class="calendar-row">
-						<div class="calendar-column on">12</div>
-						<div class="calendar-column on">13</div>
-						<div class="calendar-column on">14</div>
-						<div class="calendar-column on">15</div>
-						<div class="calendar-column on">16</div>
-						<div class="calendar-column on">17</div>
-						<div class="calendar-column on">18</div>
+						<div class="calendar-column icon-7">12</div>
+						<div class="calendar-column icon-8">13</div>
+						<div class="calendar-column icon-9">14</div>
+						<div class="calendar-column icon-10">15</div>
+						<div class="calendar-column icon-11">16</div>
+						<div class="calendar-column icon-12">17</div>
+						<div class="calendar-column icon-13">18</div>
 					</div>
 					<div class="calendar-row">
-						<div class="calendar-column on">19</div>
-						<div class="calendar-column on">20</div>
-						<div class="calendar-column on">21</div>
-						<div class="calendar-column on">22</div>
-						<div class="calendar-column on">23</div>
-						<div class="calendar-column on">24</div>
-						<div class="calendar-column on">25</div>
+						<div class="calendar-column icon-14">19</div>
+						<div class="calendar-column icon-15">20</div>
+						<div class="calendar-column icon-16">21</div>
+						<div class="calendar-column icon-17">22</div>
+						<div class="calendar-column icon-18">23</div>
+						<div class="calendar-column icon-19">24</div>
+						<div class="calendar-column icon-20">25</div>
 					</div>
 					<div class="calendar-row">
-						<div class="calendar-column on">26</div>
-						<div class="calendar-column on">27</div>
-						<div class="calendar-column on">28</div>
-						<div class="calendar-column on">29</div>
-						<div class="calendar-column on">30</div>
-						<div class="calendar-column on">31</div>
+						<div class="calendar-column icon-21">26</div>
+						<div class="calendar-column icon-22">27</div>
+						<div class="calendar-column icon-23">28</div>
+						<div class="calendar-column icon-24">29</div>
+						<div class="calendar-column icon-25">30</div>
+						<div class="calendar-column icon-26">31</div>
 						<div class="calendar-column"></div>
 					</div>
 				</div>
@@ -122,9 +125,9 @@
 				</div>
 			</div>
 
-<!-- 			<div class="layer" data-depth="0.0" id="border-container-2">
+ 			<div class="layer" data-depth="0.0" id="border-container-2">
 				<div class="border-2"></div>
-			</div> -->
+			</div>
 
 		</div>
 	</div>
@@ -138,6 +141,7 @@
 
 		// Pretty simple huh?
 		//var scene = document.getElementById('scene');
+		//var scene = $("#scene");
 		//var parallax = new Parallax(scene);
 
 		$(window).load(function() {
@@ -150,7 +154,7 @@
 			$('#data').toggleClass('hidden');
 			$('#calendar').toggleClass('hidden');
 			$('#menuBtn').toggleClass('close');
-      $('#moon-container').toggleClass('moved');
+      		$('#moon-container').toggleClass('moved');
 		});
 
 	</script>

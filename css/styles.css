@@ -112,14 +112,17 @@ canvas:active {
 
 #moon-container {
 	top: 0;
-	transition:           all 250ms ease;
-	-webkit-transition:   all 250ms ease;
-	-moz-transition:      all 250ms ease;
+	transition:           all 400ms ease;
+	-webkit-transition:   all 400ms ease;
+	-moz-transition:      all 400ms ease;
 }
 
 #moon-container.moved {
 	top: 60%;
 	pointer-events:none;
+	transition:           all 350ms ease;
+	-webkit-transition:   all 350ms ease;
+	-moz-transition:      all 350ms ease;
 }
 
 #data {
@@ -134,16 +137,18 @@ canvas:active {
 	-moz-box-sizing:    border-box;
 	left: 0px;
 	bottom: 0px;
-	transition:           all 500ms ease;
-	-webkit-transition:   all 500ms ease;
-	-moz-transition:      all 500ms ease;
+	opacity: 1;
+	transition:           all 450ms ease;
+	-webkit-transition:   all 450ms ease;
+	-moz-transition:      all 450ms ease;
 }
 
 #data.hidden {
 	bottom: -280px;
-	transition:           all 250ms ease;
-	-webkit-transition:   all 250ms ease;
-	-moz-transition:      all 250ms ease;
+	opacity: 0;
+	transition:           all 500ms ease;
+	-webkit-transition:   all 500ms ease;
+	-moz-transition:      all 500ms ease;
 }
 
 ul {
@@ -222,7 +227,9 @@ header {
 }
 
 #calendar {
-    transition: all 250ms ease 0s;
+    transition:			all 400ms ease;
+    -webkit-transition: all 400ms ease;
+	-moz-transition:	all 400ms ease;
     max-width: 400px;
     margin: 0 auto;
     margin-top: 20px;
@@ -230,7 +237,12 @@ header {
 
 #calendar.hidden {
 	margin-top: 80px;
-	transform: scale(0.5);
+	transform: 			scale(0.5);
+	-webkit-transform: 	scale(0.5);
+	-moz-transform: 	scale(0.5);
+	transition:			all 250ms ease;
+    -webkit-transition: all 250ms ease;
+	-moz-transition:	all 250ms ease;
 	opacity: 0;
 }
 
@@ -260,9 +272,37 @@ header {
 	text-transform: uppercase;
 }
 
+.calendar-column.icon-1 { background: url('../img/moon-icons/1.svg'); }
+.calendar-column.icon-2 { background: url('../img/moon-icons/2.svg'); }
+.calendar-column.icon-3 { background: url('../img/moon-icons/3.svg'); }
+.calendar-column.icon-4 { background: url('../img/moon-icons/4.svg'); }
+.calendar-column.icon-5 { background: url('../img/moon-icons/5.svg'); }
+.calendar-column.icon-6 { background: url('../img/moon-icons/6.svg'); }
+.calendar-column.icon-7 { background: url('../img/moon-icons/7.svg'); }
+.calendar-column.icon-8 { background: url('../img/moon-icons/8.svg'); }
+.calendar-column.icon-9 { background: url('../img/moon-icons/9.svg'); }
+.calendar-column.icon-10 { background: url('../img/moon-icons/10.svg'); }
+.calendar-column.icon-11 { background: url('../img/moon-icons/11.svg'); }
+.calendar-column.icon-12 { background: url('../img/moon-icons/12.svg'); }
+.calendar-column.icon-13 { background: url('../img/moon-icons/13.svg'); }
+.calendar-column.icon-14 { background: url('../img/moon-icons/14.svg'); }
+.calendar-column.icon-15 { background: url('../img/moon-icons/15.svg'); }
+.calendar-column.icon-16 { background: url('../img/moon-icons/16.svg'); }
+.calendar-column.icon-17 { background: url('../img/moon-icons/17.svg'); }
+.calendar-column.icon-18 { background: url('../img/moon-icons/18.svg'); }
+.calendar-column.icon-19 { background: url('../img/moon-icons/19.svg'); }
+.calendar-column.icon-20 { background: url('../img/moon-icons/20.svg'); }
+.calendar-column.icon-21 { background: url('../img/moon-icons/21.svg'); }
+.calendar-column.icon-22 { background: url('../img/moon-icons/22.svg'); }
+.calendar-column.icon-23 { background: url('../img/moon-icons/23.svg'); }
+.calendar-column.icon-24 { background: url('../img/moon-icons/24.svg'); }
+.calendar-column.icon-25 { background: url('../img/moon-icons/25.svg'); }
+.calendar-column.icon-26 { background: url('../img/moon-icons/26.svg'); }
+.calendar-column.icon-27 { background: url('../img/moon-icons/27.svg'); }
+.calendar-column.icon-28 { background: url('../img/moon-icons/28.svg'); }
 
-.calendar-column.on {
-	background: url('../images/icon-100.svg');
+
+.calendar-column.icon-1, .calendar-column.icon-2, .calendar-column.icon-3,  .calendar-column.icon-4, .calendar-column.icon-5, .calendar-column.icon-6, .calendar-column.icon-7, .calendar-column.icon-8, .calendar-column.icon-9,  .calendar-column.icon-10, .calendar-column.icon-11, .calendar-column.icon-12, .calendar-column.icon-13, .calendar-column.icon-14, .calendar-column.icon-15, .calendar-column.icon-16, .calendar-column.icon-17, .calendar-column.icon-18, .calendar-column.icon-19, .calendar-column.icon-20, .calendar-column.icon-21, .calendar-column.icon-22, .calendar-column.icon-23, .calendar-column.icon-24, .calendar-column.icon-25, .calendar-column.icon-26, .calendar-column.icon-27, .calendar-column.icon-28 {
 	background-repeat: no-repeat;
 	background-position: center 5px;
 	background-size: 34px;
