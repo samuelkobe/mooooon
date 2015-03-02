@@ -67,13 +67,6 @@ function init() {
 
 }
 
- function changeSize(){
-    var canvasElement = document.getElementById("canvas");
-    canvasElement.style.width = '100%';
-    canvasElement.style.height = 'auto';
-  } 
-
-
 function animate() {
   //console.log(Math.atan(obj.position.z, obj.position.x));
   halfSphere.rotation.y = Math.atan2(obj.position.z, obj.position.x);
@@ -81,7 +74,6 @@ function animate() {
   renderer.render(scene, camera);
   requestAnimationFrame(animate);
   controls.update();
-  changeSize();
 }
 
 init();
