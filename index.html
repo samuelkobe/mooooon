@@ -28,7 +28,7 @@
 			<img src='images/menu.svg'>
 		</div>
 		<div id="title">
-			<span id="day" class="">29</span> Feb 2015
+			<span id="day" class="">28</span> Feb 2015
 			<p id="time" class="">19:00</p>
 		</div>
 	</header>
@@ -106,8 +106,6 @@
 				</div>
 			</div>
 
-			<canvas id="canvas"></canvas>
-
 			<div class="layer" data-depth="0.30" id="moon-container">
 			</div>
 			<div class="layer" data-depth="0.50" id="data-container">
@@ -146,6 +144,7 @@
 			$('#calendar').removeClass('hidden');
 			$('#closeBtn').removeClass('hidden');
 			$('#menuBtn').addClass('hidden');
+      $('#canvas').addClass('moved');
 		});
 
 		$('#closeBtn').click(function() {
@@ -155,6 +154,7 @@
 			$('#calendar').addClass('hidden');
 			$('#closeBtn').addClass('hidden');
 			$('#menuBtn').removeClass('hidden');
+      $('#canvas').removeClass('moved');
 		});
 
 	</script>

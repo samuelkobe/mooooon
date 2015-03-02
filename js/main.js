@@ -54,7 +54,7 @@ function init() {
 
   renderer.setSize(window.innerWidth, window.innerHeight);
   renderer.autoClear = false;
-  document.body.appendChild(renderer.domElement);
+  document.getElementById("moon-container").insertBefore(renderer.domElement, document.getElementById("moon-container").firstChild);
   renderer.domElement.id = "canvas";
 
   controls = new THREE.OrbitControls(obj, renderer.domElement);
