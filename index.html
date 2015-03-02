@@ -7,7 +7,9 @@
 	<title>LUNR</title>
 
 	<!-- Behavioral Meta Data -->
+	<meta name="theme-color" content="#151554">
 	<meta name="apple-mobile-web-app-capable" content="yes">
+	<meta name="android-mobile-web-app-capable" content="yes">
 	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
 
 	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.2/jquery.min.js"></script>
@@ -119,6 +121,11 @@
 					</ul>
 				</div>
 			</div>
+
+			<div class="layer" data-depth="0.0" id="border-container-2">
+				<div class="border-2"></div>
+			</div>
+
 		</div>
 	</div>
 
@@ -138,23 +145,12 @@
 		});
 
 		$('#menuBtn').click(function() {
-			$('#day').addClass('hidden');
-			$('#time').addClass('hidden');
-			$('#data').addClass('hidden');
-			$('#calendar').removeClass('hidden');
-			$('#closeBtn').removeClass('hidden');
-			$('#menuBtn').addClass('hidden');
-      $('#canvas').addClass('moved');
-		});
-
-		$('#closeBtn').click(function() {
-			$('#day').removeClass('hidden');
-			$('#time').removeClass('hidden');
-			$('#data').removeClass('hidden');
-			$('#calendar').addClass('hidden');
-			$('#closeBtn').addClass('hidden');
-			$('#menuBtn').removeClass('hidden');
-      $('#canvas').removeClass('moved');
+			$('#day').toggleClass('hidden');
+			$('#time').toggleClass('hidden');
+			$('#data').toggleClass('hidden');
+			$('#calendar').toggleClass('hidden');
+			$('#menuBtn').toggleClass('close');
+      		$('#moon-container').toggleClass('moved');
 		});
 
 	</script>

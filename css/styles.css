@@ -37,13 +37,12 @@ body {
 	margin: 0;
 	font-family: Jaapokki, sans-serif;
 }
+
 canvas {
 	top: 0;
 	position: absolute;
 	z-index: 5;
-	transition:           all 750ms ease;
-	-webkit-transition:   all 750ms ease;
-	-moz-transition:      all 750ms ease;
+	cursor: grab;
 }
 
 canvas.moved {
@@ -71,22 +70,32 @@ canvas.moved {
 	height: 100%;
 }
 
-#border-container, #moon-container, #data-container {
+#border-container, #border-container-2, #moon-container, #data-container {
 	width: 100%;
 	height: 100%;
 	box-sizing: border-box;
+	position: fixed;
+	top: 0;
 }
 
-#border-container {
+#border-container, #border-container-2 {
 	pointer-events:none;
 	padding: 15px 10px;
 }
 
-.border {
+#border-container-2 {
+	z-index: 20;
+}
+
+.border, .border-2 {
 	border: 2px solid #17F1BE;
 	height: 100%;
 	background: url('../images/dots.svg');
 	background-size: 10px;
+}
+
+.border-2 {
+	background: none;
 }
 
 
@@ -94,21 +103,16 @@ canvas.moved {
 	opacity: 0.0;
 }
 
-#moon {
-	width: 80%;
-	padding-bottom: 80%;
-	position: absolute;
-	background: red;
-	left: 50%;
-	top: 50%;
-	transform: translateX(-50%) translateY(-50%);
-	-webkit-transform: translateX(-50%) translateY(-50%);
-	-moz-transform: translateX(-50%) translateY(-50%);
-	background: url('../images/moon-test.png');
-	background-size: 100%;
-	background-repeat: no-repeat;
-	background-position: center;
-	max-width: 400px;
+#moon-container {
+	top: 0;
+	transition:           all 250ms ease;
+	-webkit-transition:   all 250ms ease;
+	-moz-transition:      all 250ms ease;
+}
+
+#moon-container.moved {
+	top: 60%;
+	pointer-events:none;
 }
 
 #data {
@@ -116,20 +120,23 @@ canvas.moved {
 	z-index: 10;
 	width: 100%;
 	max-width: 400px;
-	padding: 0 60px;
+	padding: 60px;
 	pointer-events: none;
 	box-sizing:         border-box;
 	-webkit-box-sizing: border-box;
 	-moz-box-sizing:    border-box;
-	left: 10px;
-	bottom: 60px;
-	transition:           all 250ms ease;
-	-webkit-transition:   all 250ms ease;
-	-moz-transition:      all 250ms ease;
+	left: 0px;
+	bottom: 0px;
+	transition:           all 500ms ease;
+	-webkit-transition:   all 500ms ease;
+	-moz-transition:      all 500ms ease;
 }
 
 #data.hidden {
-	bottom: -180px;
+	bottom: -280px;
+	transition:           all 250ms ease;
+	-webkit-transition:   all 250ms ease;
+	-moz-transition:      all 250ms ease;
 }
 
 ul {
@@ -144,7 +151,7 @@ li {
 
 h1 {
 	letter-spacing: 10px;
-	line-height: 1;
+	line-height: 1.2;
 	margin-bottom: 10px;
 }
 
@@ -207,15 +214,11 @@ header {
 	-moz-transition:      all 250ms ease;
 }
 
-#menuBtn.hidden {
-	left: -100px;
-}
-
 #calendar {
-	margin-top: 70px;
-	transition:           all 250ms ease;
-	-webkit-transition:   all 250ms ease;
-	-moz-transition:      all 250ms ease;
+    transition: all 250ms ease 0s;
+    max-width: 400px;
+    margin: 0 auto;
+    margin-top: 20px;
 }
 
 #calendar.hidden {
@@ -279,4 +282,25 @@ header {
 
 #closeBtn.hidden {
 	bottom: -100px;
+}
+
+
+/***
+
+	MEDIA QUERY
+
+***/
+
+@media only screen 
+and (min-width : 720px) {
+
+}
+
+@media only screen 
+and (max-width : 600px) {
+	#data {
+		left: 0;
+		bottom: 0;
+		padding: 40px;
+	}
 }
