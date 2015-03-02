@@ -30,10 +30,15 @@
 
 	<header>
 		<div id="menuBtn">
-			<img src='images/menu.svg'>
+			<!--<img src='images/menu.svg'>-->
+			<span id="line-1"></span>
+			<span id="line-2"></span>
+			<span id="line-3"></span>
 		</div>
 		<div id="title">
-			<span id="day" class="">28</span> Feb 2015
+			<span id="day" class="">00</span> 
+			<span id="month">Jan</span>
+			2015
 			<p id="time" class="">19:00</p>
 		</div>
 	</header>
@@ -115,12 +120,38 @@
 			</div>
 			<div class="layer" data-depth="0.50" id="data-container">
 				<div id="data">
-					<h1 id="phase-name"class="">WAXING<br>GIBBOUS</h1>
-					<ul>
-						<li>moonrise: 23:02</li>
-						<li>moonset: 8:15</li>
-						<li>15 days old</li>
-						<li>367,234 km away</li>
+
+					<div class="phase-title">
+						<ul class="phases-list">
+							<li><h1>New</h1></li>
+							<li><h1>Waxing</h1></li>
+							<li><h1>First</h1></li>
+							<li><h1>Waxing</h1></li>
+							<li><h1>Full</h1></li>
+							<li><h1>Waning</h1></li>
+							<li><h1>Third</h1></li>
+							<li><h1>Waning</h1></li>
+						</ul>
+					</div>
+
+					<div class="phase-title">
+						<ul class="phases-list">
+							<li><h1>Moon</h1></li>
+							<li><h1>Crescent</h1></li>
+							<li><h1>Quarter</h1></li>
+							<li><h1>Gibbous</h1></li>
+							<li><h1>Moon</h1></li>
+							<li><h1>Gibbous</h1></li>
+							<li><h1>Quarter</h1></li>
+							<li><h1>Crescent</h1></li>
+						</ul>
+					</div>
+
+					<ul id="phase-information">
+						<li id="phase-info-1">moonset: 8:15</li>
+						<li id="phase-info-2">moonrise: 23:02</li>
+						<li id="phase-info-3">moonset: 8:15</li>
+						<li id="phase-info-4">367,234 km away</li>
 					</ul>
 				</div>
 			</div>

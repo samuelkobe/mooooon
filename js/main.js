@@ -69,6 +69,40 @@ function init() {
 
 }
 
+function setDateTime() {
+  var d = new Date(),
+      h = (d.getHours()<10?'0':'') + d.getHours(),
+      m = (d.getMinutes()<10?'0':'') + d.getMinutes();
+  $("#time").text(h + ':' + m);
+  var dd = d.getDate();
+  var mm = d.getMonth()+1; //January is 0!
+  var yyyy = d.getFullYear();
+  if(dd<10) {
+      dd='0'+dd
+  } 
+  if(mm<10) {
+      mm='0'+mm
+  } 
+
+  var month = 'Jan';
+
+  if (mm == 01) { month = 'Jan'; }
+  else if (mm == 02) { month = 'Feb'; }
+  else if (mm == 03) { month = 'Mar'; }
+  else if (mm == 04) { month = 'Apr'; }
+  else if (mm == 05) { month = 'May'; }
+  else if (mm == 06) { month = 'Jun'; }
+  else if (mm == 01) { month = 'Jul'; }
+  else if (mm == 01) { month = 'Aug'; }
+  else if (mm == 01) { month = 'Sep'; }
+  else if (mm == 01) { month = 'Oct'; }
+  else if (mm == 01) { month = 'Nov'; }
+  else if (mm == 01) { month = 'Dec'; }
+
+  $("#day").text(dd);
+  $("#month").text(month);
+}
+
 function animate() {
   halfSphere.rotation.y = (Math.atan2(obj.position.z, obj.position.x));
   moonphase = (halfSphere.rotation.y*180/Math.PI);
@@ -85,40 +119,68 @@ function animate() {
 function getMoonPhase() {
   if(oldmoonphase != moonphase) {
     setMoonPhase();
+    changeData();
     oldmoonphase = moonphase;
   } else {
     // Do nothing
   }
 }
 
+
+function randomNumber(min,max) {
+    var randomNumber = Math.floor(Math.random()*(max-min+1)+min);
+    return randomNumber;
+}
+
 function setMoonPhase() {
     document.getElementById('data').className = '';
   if (moonphase > 60 && moonphase < 135) {
     $('#data').addClass('phase-new');
-    console.log("NEW");
+    //console.log("NEW");
   } else if (moonphase > 135 && moonphase <= 180) {
     $('#data').addClass('phase-waning-crescent');
-    console.log("WANING CRESCENT");
+    //console.log("WANING CRESCENT");
   } else if (moonphase >= -180 && moonphase < -160) {
     $('#data').addClass('phase-third-quarter');
-    console.log("THIRD QUARTER");
+    //console.log("THIRD QUARTER");
   } else if (moonphase > -160 && moonphase < -120) {
     $('#data').addClass('phase-waning-gibbous');
-    console.log("WANING GIBBOUS");
+    //console.log("WANING GIBBOUS");
   } else if (moonphase > -120 && moonphase < -50) {
     $('#data').addClass('phase-full');
-    console.log("FULL");
+    //console.log("FULL");
   } else if (moonphase > -50 && moonphase < -7) {
     $('#data').addClass('phase-waxing-gibbous');
-    console.log("WAXING GIBBOUS");
+    //console.log("WAXING GIBBOUS");
   } else if (moonphase > -7 && moonphase < 7) {
     $('#data').addClass('phase-first-quarter');
-    console.log("FIRST QUARTER");
+    //console.log("FIRST QUARTER");
   } else if (moonphase > 7 && moonphase < 60) {
     $('#data').addClass('phase-waxing-crescent');
-    console.log("WAXING CRESCENT");
+    //console.log("WAXING CRESCENT");
   }
 }
 
+function changeData() {
+    var illumination = Math.round((90 - (moonphase)) * (5/9));
+
+    if (illumination >= 0 && illumination <= 100) {
+      $('#phase-info-1').text("illumination: " + illumination + "%");
+    }
+    else if (illumination > 100) {
+      var illuminationNegative = 100 - (illumination - 100);
+      $('#phase-info-1').text("illumination: " + illuminationNegative + "%");
+    }
+    else if (illumination < 0) {
+      var illuminationNegative = illumination * -1;
+      $('#phase-info-1').text("illumination: " + illuminationNegative + "%");
+    }
+
+    //just faking the distance thing for now... we should fix this later.
+    var distance = randomNumber(1, 700);
+    $('#phase-info-4').text("376," + distance + "km away");
+}
+
 init();
+setDateTime();
 animate();
