@@ -68,7 +68,8 @@ function init() {
 }
 
 function animate() {
-  //console.log(Math.atan(obj.position.z, obj.position.x));
+  // console.log(Math.atan(obj.position.z, obj.position.x));
+  console.log(obj.rotation.y);
   halfSphere.rotation.y = Math.atan2(obj.position.z, obj.position.x);
 
   renderer.render(scene, camera);

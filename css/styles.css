@@ -42,12 +42,15 @@ canvas {
 	top: 0;
 	position: absolute;
 	z-index: 5;
+	cursor: -webkit-grab;
+	cursor: -moz-grab;
 	cursor: grab;
 }
 
-canvas.moved {
-	top: 350px;	
-	pointer-events: none;
+canvas:active {
+	cursor: -webkit-grabbing;
+	cursor: -moz-grabbing;
+	cursor: grabbing;
 }
 
 #data li, p, #calendar {
@@ -76,6 +79,10 @@ canvas.moved {
 	box-sizing: border-box;
 	position: fixed;
 	top: 0;
+}
+
+#data-container {
+	pointer-events:none;
 }
 
 #border-container, #border-container-2 {
