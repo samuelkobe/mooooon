@@ -12,7 +12,7 @@ The LUNR app was/is an SIAT 381 Project developed by Aaron La Lau and myself, cr
 
 ## Credits
 
-[a link](https://github.com/alalau/ "Aaron La Lau"), [a link](https://github.com/samuelkobe/ "Samuel Kobe"), (Special thanks to [a link](https://github.com/shovon/ "Shovon"))
+[Aaron La Lau](https://github.com/alalau/ "Aaron La Lau"), [Samuel Kobe](https://github.com/samuelkobe/ "Samuel Kobe"), (Special thanks to [Shovon](https://github.com/shovon/ "Shovon"))
 
 ## License
 
