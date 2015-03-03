@@ -1,30 +1,18 @@
 # Mooooon
 
-TODO: Description to come
-
-## Installation
-
-TODO: Coming Soon
+Mooooon or LUNR as it was later renamed is an educational concept web app. The purpose of LUNR was/is to give its users an opportunity to learn about all the different moon phases throughout a month on a lunar calendar. LUNR displays each lunar phase through both an interactive moon graphic and text information. By swiping right or left a user can adjust the moon phase and learn the name, illumination, moonrise, moonset, and distance of each phase. Alternatively, users can find the current month's entire lunar cycle by selecting the menu.  
 
 ## Usage
 
-TODO: Coming Soon
-
-## Contributing
-
-1. Fork it!
-2. Create your feature branch: `git checkout -b my-new-feature`
-3. Commit your changes: `git commit -am 'Add some feature'`
-4. Push to the branch: `git push origin my-new-feature`
-5. Submit a pull request :D
+Fork or Download the zip file. Run a server (http-server) from the root folder. Head to localhost:8080, that's it.
 
 ## History
 
-TODO: Coming Soon
+The LUNR app was/is an SIAT 381 Project developed by Aaron La Lau and myself, created in Feburary 2015.
 
 ## Credits
 
-TODO: Aaron La Lau, Samuel Kobe
+[a link](https://github.com/alalau/ "Aaron La Lau"), [a link](https://github.com/samuelkobe/ "Samuel Kobe"), (Special thanks to [a link](https://github.com/shovon/ "Shovon"))
 
 ## License
 
