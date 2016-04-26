@@ -36,7 +36,7 @@ function init() {
   var geometry = new THREE.CircleGeometry(110, 110);
   
   var material = new THREE.MeshBasicMaterial({
-    map: THREE.ImageUtils.loadTexture('../img/mooncolor-big.jpg')
+    map: THREE.ImageUtils.loadTexture('./img/mooncolor-big.jpg')
   });
 
   var halfGeometry = new THREE.SphereGeometry(101, 101, 101, Math.PI/2, Math.PI, Math.PI, Math.PI);
@@ -177,7 +177,7 @@ function changeData() {
     }
 
     //just faking the distance thing for now... we should fix this later.
-    var distance = randomNumber(100, 300);
+    var distance = randomNumber(1, 700);
     $('#phase-info-4').text("376," + distance + "km away");
 }
 
